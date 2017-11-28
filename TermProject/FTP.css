@@ -1,0 +1,584 @@
+html {
+
+  height: 100%;
+
+}
+
+
+
+body {
+
+  position: relative;
+
+ 
+
+  margin: 0;
+
+  min-height: 100%; 
+
+  text-align: left;
+
+  background-color: silver;
+
+}
+
+
+
+	
+
+	
+
+
+
+
+
+.bc-light-gray {
+
+  background-color: #e9e9e9;
+
+}
+
+
+
+.bc-light-gray2 {
+
+  background-color: #fafafa;
+
+}
+
+
+
+.color-red {
+
+  color: red;
+
+}
+
+
+
+.fw-bold {
+
+  font-weight: bold;
+
+  color: red;
+
+}
+
+h1, h3 {
+
+	  display: inline-block;
+
+	  margin: 0px;
+
+}
+
+
+
+#header {
+
+	border-radius: 10px;
+
+	width: 90%;
+
+	height: 160px;
+
+	margin-left: 60px;
+
+	border-bottom: none;
+
+	background-color: black;
+
+	padding: 5px 80px;
+
+	text-align: center;
+
+
+
+  
+
+}
+
+
+
+#header h1 {
+
+  color: white;
+
+  
+
+}
+
+
+
+
+
+#results-container h1 {
+
+  display: flex;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+#subtitle {
+
+  font-weight: bold;
+
+  margin-left: 20px;
+
+}
+
+
+
+#main-container {
+
+  padding: 20px 100px 0px 100px;
+
+  
+
+}
+
+
+
+#search-container {
+
+	
+
+  margin-top: 0px;
+
+  margin-bottom: 0px;
+
+  
+
+}
+
+
+
+#movieSearchBox {
+
+
+
+	margin: 2px;
+
+	float: left;
+
+	width: 200px;
+
+	font-size: 12pt;
+
+
+
+}
+
+#cast-container {
+
+	border: 10px solid black;
+
+	background-color: black;
+
+	border-radius: 0px;
+
+	position: fixed;
+
+	flow: right;
+
+		top: 115px;
+
+		right: 0px;
+
+		overflow:auto;
+
+		Color: red;
+
+		
+
+}
+
+#popularMoviesContainer{
+
+	width: 50%;
+
+	float: right;	
+
+	margin-top: 0px;
+
+	position: right;
+
+	display: flex;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	padding: 10px 10px 10px 10px;
+
+	background-color: black;
+
+	border: 1px solid black;
+
+	color: white;
+
+	
+
+	
+
+}
+
+#searchButton1{
+
+	background-color: black;
+
+	padding: 20px;
+
+	border-radius: 0px;
+
+}
+
+#buttonAlign{
+
+	margin-top: 70px;
+
+	border-radius:0px;
+
+	padding-top: 40px;
+
+	background-color: white;
+
+}
+
+#popMovie{
+
+	width: 100px;
+
+    height: 110px;
+
+	margin: 10px;
+
+}
+
+#results-container {
+
+	position:absolute; top: 170px; left: 0px;
+
+	width: 45%;
+
+	display: flex;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	border: 1px solid gray;
+
+	margin-top: 10px;
+
+	margin-left: 65px;
+
+	border-radius: 0px;
+
+	padding: 10px 10px 10px 10px;
+
+	color: red;
+
+	background-color: black;
+
+	overflow: auto;
+
+
+
+}
+
+#footer {
+
+  position: absolute;
+
+  bottom: 0px;
+
+  width: 100%;
+
+  overflow: auto;
+
+  padding: 16px 80px;
+
+  border-top: 1px solid gray;
+
+  background-color: #e9e9e9;
+
+  outline: 4px solid white;
+
+}
+
+#rating {
+
+  display: inline;
+
+  margin-left: 20px;
+
+  padding: 5px 10px;
+
+  border-radius: 10px;
+
+  color: red;
+
+}
+
+
+
+#castContainer {
+
+  width: 580px;
+
+  display: inline-block;
+
+  text-decoration: underline;
+
+  color: red;
+
+}
+
+
+
+#castContainer button {
+
+  background-color: grey;
+
+}
+
+#results-container img {
+
+		
+
+		width: 150px;
+
+		height: 220px;
+
+		margin: 0px 10px 10px 0px;
+
+}
+
+<!------------------>
+
+
+
+button {
+
+  padding: 5px ;
+
+  border: 1px solid gray;
+
+  
+
+  border-radius: 0px;
+
+  outline: none;
+
+  cursor: pointer;
+
+}
+
+
+
+button:hover {
+
+	background-color: none;
+
+	
+
+}
+
+
+
+button:active {
+
+  border: 2px solid red;
+
+}
+
+
+
+
+
+.flex-container {
+
+    display: -webkit-flex;
+
+    display: flex;
+
+   
+
+
+
+}	
+
+.flexbox1 {
+
+    display: -webkit-flex;
+
+    display: flex;
+
+	height: 35px;
+
+	margin-top: 40px;
+
+
+
+}
+
+.close-results-container
+
+	{
+
+		position:absolute;
+
+		top:10px;
+
+		right:10px;
+
+		font-size:1em;
+
+		font-weight:bold;
+
+		background-color:black;
+
+		z-index:99;
+
+	}
+
+	
+
+.resultsBoxList{
+
+  padding: 10px;
+
+  width: 800px;
+
+  flex-grow: 1;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-family: Verdana, Arial, sans-serif;
+
+  font-size: 11pt;
+
+  background-color: black;
+
+  border: 1px solid gray;
+
+  text-decoration: underline;
+
+}
+
+
+
+.resultsBoxGrid{
+
+  height: 100px;
+
+  width: 100px;
+
+  color: white;
+
+  font-family: Verdana, Arial, sans-serif;
+
+  font-size: 11pt;
+
+  cursor: pointer;
+
+   background-color: black;
+
+   text-decoration: underline;
+
+}
+
+.results-box:hover {
+
+  	
+
+}
+
+
+
+.year {
+
+  color: white;
+
+}
+
+a:link{
+
+		text-decoration: ;
+
+		font-family: Arial, Helvetica, sans-serif;
+
+	}
+
+	
+
+.castName {
+
+  display: inline-block;
+
+  width: 240px;
+
+}
+
+.pseudolink { 
+
+   color: red; 
+
+   text-decoration:none; 
+
+   cursor:pointer; 
+
+   }
+
+
+
+
+
+.fr {
+
+	margin-left: 2px;
+
+	background-color: none;
+
+	margin-top: 40px;
+
+	margin-bottom: 100px;
+
+	float: left;
+
+
+
+}
+
+
+
+.searchline{
+
+	margin-left: 10px;
+
+	margin-top: 20px;
+
+	background-color: none;
+
+	float: right;
+
+}
+
+.movielist{
+
+	background-color: black;
+
+}
+
+
+
+
+
+
+
