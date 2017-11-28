@@ -1,0 +1,111 @@
+{
+  "kind": "books#volume",
+  "id": "Wfan6L9RGgYC",
+  "etag": "bvqNhF2T+aA",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/Wfan6L9RGgYC",
+  "volumeInfo": {
+    "title": "The Modern Web",
+    "subtitle": "Multi-device Web Development with HTML5, CSS3, and JavaScript",
+    "authors": [
+      "Peter Gasston"
+    ],
+    "publisher": "No Starch Press",
+    "publishedDate": "2013",
+    "description": "<p><b>A Guide to Modern Web Development</b><br></p><p>Today's web technologies are evolving at near-light speed, bringing the promise of a seamless Internet ever closer to reality. When users can browse the Web on a three-inch phone screen as easily as on a fifty-inch HDTV, what's a developer to do?</p><p>Peter Gasston's <i>The Modern Web</i> will guide you through the latest and most important tools of device-agnostic web development, including HTML5, CSS3, and JavaScript. His plain-English explanations and practical examples emphasize the techniques, principles, and practices that you'll need to easily transcend individual browser quirks and stay relevant as these technologies are updated.</p><p>Learn how to:</p><p>* Plan your content so that it displays fluidly across multiple devices<br>* Design websites to interact with devices using the most up-to-date APIs, including Geolocation, Orientation, and Web Storage<br>* Incorporate cross-platform audio and video without using troublesome plug-ins<br>* Make images and graphics scalable on high-resolution devices with SVGUse powerful HTML5 elements to design better forms</p><p>Turn outdated websites into flexible, user-friendly ones that take full advantage of the unique capabilities of any device or browser. With the help of <i>The Modern Web</i>, you'll be ready to navigate the front lines of device-independent development.</p>",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1593274874"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781593274870"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": true
+    },
+    "pageCount": 264,
+    "printedPageCount": 266,
+    "dimensions": {
+      "height": "24.00 cm",
+      "width": "17.80 cm",
+      "thickness": "1.50 cm"
+    },
+    "printType": "BOOK",
+    "categories": [
+      "Computers / Software Development & Engineering / General",
+      "Computers / Web / Design"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.2.0.preview.3",
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE734xRwRhbAY60GdVUzMKYhYcDdvWvop_T1QYqRzPmw42yN-yehFnhCdrRYM9TKM5DRt-wqzERg5dGbT-oZOgdnv3_xkaP8Dy7JzknSEddPireVrlTrdMrH_BsTHf_1kaZrDv0Iw&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72lCWWFEu1IowimR-XeNeKx6BNS0QaKoWqYHGQ9Jn6aiBrtw9HBQmed1v7JAjZMmLz03WIRV3HSRMP-OzSPtZAiz6kjH7ExHOTJUtYBbnf9HPaCga9H2a241vWiArC1WLeefU3y&source=gbs_api",
+      "small": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72-5PERFfAGPAU3-5g-zWuySdfD99RpvL9RM6odc6woEdZe31o4kzaCjRJdU-XxlrinYO69qHcuE24flTE48BN6SqoCXrdh6Uydi24Y__0Di_uBgjf9yOCcN0aQlAGLQ7Znbblk&source=gbs_api",
+      "medium": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72BGg3xBRQ6z1Y7EGjUluMGayq6VkgQlchyDYVRmEhURyv4KZoh3sNuSilL3LA9QNJO7N00-40p8f2D_PmzNXWOu8suF9ZrK9nuH9dOy8lxKXzU_liqmfVPQ1ts7sQ58CPnXegl&source=gbs_api",
+      "large": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE720TxYI1W8iVCmVSrsUG0zTi2pIKnCMpK2f2JYQk5-y-EsSXG1Nl12sUi_fFeiHYfLRfQy1TcT7dGY4UgvJlqa0F6cNs2nfoTVn_p1ZVjsO4MbQb3qir5ptaCVyq1ZUc4VehHUN&source=gbs_api",
+      "extraLarge": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73D_-TLb3INcv5mui_wBWVq-N-KBA5hhz4fyAOZerbAa2Cqrpujfj231TQ0mEyT3hfY1LMLfPkuUeR_msKzOSIST3YAOWzKAzQxYSKSQoPZ_6MLSfMgf4irSK5bhyqyRjUO3nkb&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=Wfan6L9RGgYC&hl=&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Wfan6L9RGgYC&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.com/books/about/The_Modern_Web.html?hl=&id=Wfan6L9RGgYC"
+  },
+  "layerInfo": {
+    "layers": [
+      {
+        "layerId": "geo",
+        "volumeAnnotationsVersion": "8"
+      }
+    ]
+  },
+  "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+      "amount": 27.95,
+      "currencyCode": "USD"
+    },
+    "retailPrice": {
+      "amount": 15.37,
+      "currencyCode": "USD"
+    },
+    "buyLink": "http://books.google.com/books?id=Wfan6L9RGgYC&hl=&buy=&source=gbs_api",
+    "offers": [
+      {
+        "finskyOfferType": 1,
+        "listPrice": {
+          "amountInMicros": 27950000,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amountInMicros": 15370000,
+          "currencyCode": "USD"
+        },
+        "giftable": true
+      }
+    ]
+  },
+  "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+      "isAvailable": true
+    },
+    "pdf": {
+      "isAvailable": true
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=Wfan6L9RGgYC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  }
+}

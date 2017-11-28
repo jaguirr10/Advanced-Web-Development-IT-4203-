@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Part 4</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <link href="CSSM1P3.css" rel="stylesheet">
+
+
+<script type = "text/javascript" language = "javascript">
+
+
+         $(function(){
+               $.getJSON('m4.json', function(canelo) {
+
+                   var itemsHTML=""; 
+                   
+                    for (i in canelo.items)  //"<img src=" +json.Image+">"
+                        {
+   itemsHTML+= '<p> ID: ' + canelo.items[i].id + 
+    
+  '</p>'  + '<p> Title:' + canelo.items[i].volumeInfo.title +'</p>'+ '</p>'  + 
+  '<p>Subtitle: ' + canelo.items[i].volumeInfo.subtitle + '</p>'  + 
+  '<p> Authors: ' + canelo.items[i].volumeInfo.authors + '</p>'  + 
+  '<p> Published Date: ' + canelo.items[i].volumeInfo.publishedDate + '</p>'  + 
+  '<p> Description: ' + canelo.items[i].volumeInfo.description + '</p>'  + 
+    
+                              
+  '<p> Page Count: ' + canelo.items[i].volumeInfo.pageCount + '</p>'  + 
+  '<p> Print Type: ' + canelo.items[i].volumeInfo.printType + '</p>'  + 
+  '<p> Average Rating: ' + canelo.items[i].volumeInfo.averageRating + '</p>'  +  
+'</p>'  + '<p> Thumbnail: '+'<img src='+  canelo.items[i].volumeInfo.imageLinks.thumbnail +'>'+'</p>'  + 
+'<p> Language ' + canelo.items[i].volumeInfo.language + '</p>'  + 
+'<p> Preview Link: ' + "<a href=" + canelo.items[i].volumeInfo.previewLink   + "> Preview  </a>"+ 
+'<p> Info Link: ' + "<a href=" + canelo.items[i].volumeInfo.infoLink  + "> Info Link </a>" + '</p>' +
+'<p> Canonical Link Volume: ' + "<a href="  + canelo.items[i].volumeInfo.canonicalVolumeLink + "> CanonicalVolume </a>"
+'</p>'  + '<p> Sales Info Country: ' + canelo.items[i].saleInfo.country + '</p>' + 
+'</p>'  +'<p> Access Info Quote Sharing Allowed: ' + canelo.items[i].accessInfo.quoteSharingAllowed + '</p>' ;
+ 
+
+                        }
+                    $('#items').html(itemsHTML);
+                    $('#items').html(itemsHTML);
+
+                   
+                 });
+            });
+      
+  </script>
+
+
+
+
+
+    
+</head>
+
+<body>
+
+<div id = "header">
+                  <h1 class="ht">Part 4</h1>
+
+		
+
+      </div>
+
+     <br>
+
+    <div id = "items"></div>
+
+     <p class= "par">
+                  
+                <a class= "par" href="Milestone1.html">Milstone 1</a></p>
+
+    
+</body>
+
+</html>
+

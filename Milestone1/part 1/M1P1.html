@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    
+    <title>Milestone Part1</title>
+
+    <meta charset="UTF-8" />
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <link href="CSSM1P3.css" rel="stylesheet">
+
+<style>
+
+
+body 
+
+    {
+
+                  
+          overflow-x:hidden;
+		
+
+}
+</style>
+
+     
+
+</head>
+
+
+
+<body>
+
+<div id = "header">
+ <h1 class="ht">Part 1</h1>
+
+
+
+</div>
+
+		<br>
+
+		
+
+		
+
+<br>
+
+
+
+<div id="Books"></div>
+
+
+
+
+<script>
+
+    
+
+    
+
+    $(function(){
+
+        $.getJSON("m1.json", function (json) //json is the parameter name to hold the response data and it will be converted to a JS object by the function
+
+            {
+
+               
+
+
+            var courseHTML="";
+
+
+
+            for (i in json.Books)
+
+            {
+
+                courseHTML+="<br>"+  "<p> ID:"+json.Books[i].ID + "</p>"  +"<p> Title:"+json.Books[i].Title +"</p> " +"<br>"+ "<p> Subtitle:" +json.Books[i].SubTitle + "</p>"+"<br>"+"<p> Description:"+json.Books[i].Description + "</p>" +"<br>"+ "<p> Image: " +"<img src=" +json.Books[i].Image + ">" + "</p>"+"<br>"+ "<p> isbn: "+json.Books[i].isbn + "</p>"+"<br>";
+
+            }
+
+            $("#Books").html(courseHTML);
+
+            }); 
+
+    })
+
+    
+
+           
+
+
+
+</script>
+
+
+
+<p class= "par"> 
+            <br>
+             <br>
+                <a class="par" href= "Milestone1.html">Milstone 1</a></p> 
+                   
+                   
+
+</body>
+
+</html>

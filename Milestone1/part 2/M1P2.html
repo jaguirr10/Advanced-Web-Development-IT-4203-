@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+    <title>Part2</title>
+
+    <meta charset="UTF-8" />
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <link href="CSSM1P3.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div id = "header">
+                  <h1 class="ht">Part 2</h1>
+
+		
+
+      </div>
+
+     <br>
+
+ 
+  
+
+
+
+ <div class="BG">
+  
+
+<div id="Instructor"></div>
+
+</div>
+
+
+<script>
+
+    
+ $(function(){
+        $.getJSON("m2.json", function (json) //json is the parameter name to hold the response data and it will be converted to a JS object by the function
+            {
+                $("#Instructor").html("<p> ID:" +json.ID + "</p>" +"<p> Title:"+json.Title + "</p>"  + "<img src="+json.Image + ">"+ "<p>SubTitle: " + json.SubTitle+ "</p>"  + "<p>Description:"  + json.Description+ 
+				"<br>"+"</p>"+"<br>" + "<p> Author:" +
+				json.Author+ "</p>"  + "<p> ISBN:" +
+				json.ISBN+ "</p>"  +  "<p> Year:" +
+				json.Year+ "</p>"+  "<p> Page:" +
+				json.Page+ "</p>" +  "<p> Publisher:" +
+				json.Publisher+ "</p>"  + "<p> DownloadLink:"+ "<a href="   + 
+				json.Download + "</p>" + "Download</a>"); //@HireDate has a special charater @
+
+                $("#BG").append(Instructor);        
+    }) 
+    })
+    
+          
+
+
+
+</script>
+
+<div id="Instructor"></div>
+
+
+ <p class= "par">
+                <a class="par" href= "Milestone1.html">Milstone 1</a></p> 
+
+
+</body>
+
+</html>
