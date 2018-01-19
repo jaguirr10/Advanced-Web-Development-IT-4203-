@@ -1,0 +1,237 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="M3Style.css" rel="stylesheet">
+    
+    <style>
+ul.pg {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pg li {display: inline;}
+
+ul.pg li a {
+      background-color: black;
+    color: white;
+    border: 2px solid white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+    
+                
+        .bookpadding{padding-left: 10px;}
+        .title{color:black; font-size: 30px; line-height: 110%; clear: left; border-top-style: solid;}
+        .subtitle{color:black; font-size: 20px; border-bottom-style: solid;}
+        .image{float: left; margin: 0px 10px 40px 10px; }
+        .headers{}
+        .paragraphs{line-height: 110%;}    
+    </style>
+    
+	<title>Milestone 3</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<script type="text/javascript">
+    
+	 $(document).ready(function ()
+	 {
+		 $("#btnSearch").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val();
+			searchBooks(url);
+		 });
+	 });
+    
+    
+    $(document).ready(function ()
+	 {
+		 $("#pg1").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val() + "&startIndex=0";
+			searchBooks(url);
+            $("#currentPage").replaceWith("Current Page: 1")
+		 });
+	 });    
+    
+    
+    $(document).ready(function ()
+	 {
+		 $("#pg2").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val() + "&startIndex=10";
+			searchBooks(url);
+            $("#currentPage").replaceWith("Current Page: 2")
+		 });
+	 });   
+    
+    
+    $(document).ready(function ()
+	 {
+		 $("#pg3").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val() + "&startIndex=20";
+			searchBooks(url);
+            $("#currentPage").replaceWith("Current Page: 3")
+		 });
+	 }); 
+        
+    
+    $(document).ready(function ()
+	 {
+		 $("#pg4").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val() + "&startIndex=30";
+			searchBooks(url);
+            $("#currentPage").replaceWith("Current Page: 4")
+		 });
+	 });  
+        
+    
+    $(document).ready(function ()
+	 {
+		 $("#pg5").click(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/volumes?q=" + $("#searchTerm").val() + "&startIndex=40";
+			searchBooks(url);
+            $("#currentPage").HTML("Current Page: 5")
+		 });
+	 });  
+    
+    
+    $(document).ready(function ()
+	 {
+		 $("#mybooklist").ready(function ()
+		 {
+			var url="https://www.googleapis.com/books/v1/users/102270121096513839701/bookshelves/1001/volumes";
+			googleLibraryLoad(url);
+		 });
+	 });  
+        
+    function searchBooks(servicePoint)
+    {
+        $("#booklist").html("Searching ..."+"<img src='http://vignette1.wikia.nocookie.net/wikiality/images/7/70/ProgressBar.gif/revision/latest?cb=20070406024457'>");
+        
+        $.getJSON(servicePoint, function (json)
+        {
+            var booksHTML="";
+           
+			for (i in json.items)
+			{
+				booksHTML+="<img class='booklistitem' data-bookid='"+json.items[i].id+ "'";
+				booksHTML+="src='"+json.items[i].volumeInfo.imageLinks.smallThumbnail+ "' height='100'>";
+			}
+			$("#booklist").html(booksHTML);
+			
+			
+            $(".booklistitem").on('click', function () 
+			{ 	
+				getBookDetails( $(this).attr("data-bookid") ); // use "this" to refer to the current clicked element or use event target, see the next a few lines for the alternative way
+			});
+        })
+		.fail(function (jqxhr, status, errorMessage)
+		{
+			$("#booklist").html("Status Code: " + status+"<br>Error Message: "+errorMessage);
+		}); 
+     }
+        
+    
+function googleLibraryLoad(servicePoint)
+    {
+        
+        $.getJSON(servicePoint, function (json)
+        {
+            var myBooksHTML="";
+           
+			for (i in json.items)
+			{
+				myBooksHTML+="<img class='booklistitem' data-bookid='"+json.items[i].id+ "'";
+				myBooksHTML+="src='"+json.items[i].volumeInfo.imageLinks.smallThumbnail+ "' height='100'>";
+			}
+			$("#mybooklist").html(myBooksHTML);
+			
+			
+            $(".booklistitem").on('click', function () 
+			{ 	
+				getBookDetails( $(this).attr("data-bookid") ); // use "this" to refer to the current clicked element or use event target, see the next a few lines for the alternative way
+			});
+        })
+		     }
+
+     function getBookDetails(bookid)
+     {
+         $("#bookdetails").html("Working ...");
+
+         
+
+         $.getJSON("https://www.googleapis.com/books/v1/volumes/" + bookid, function (json)
+         {
+            $("#bookdetails").html("");
+			var bookHTML = "<h3>"+json.volumeInfo.title+ "</h3>";
+            bookHTML+="<p>Authors: "+json.volumeInfo.authors+ "</p>"; 
+			bookHTML+="<img src='"+json.volumeInfo.imageLinks.thumbnail+ "'>";
+            bookHTML+="<p>Language: "+json.volumeInfo.language+ "</p>"; 
+            bookHTML+="<p>Pages: "+json.volumeInfo.pageCount+ "</p>";   
+             
+            if(typeof(json.saleInfo.listPrice) != "undefined")
+                {
+                     bookHTML+="<p>Price: "+json.saleInfo.listPrice.amount+ "</p>";          
+                } else {
+                     bookHTML+="<p>Price: Not Available</p>"; 
+                }
+           
+			bookHTML+="<p>"+json.volumeInfo.description+ "</p>";
+			bookHTML+="<a href='https://www.googleapis.com/books/v1/volumes/"+bookid+"' target='_blank'>See this book's JSON</a>";
+			$("#bookdetails").html(bookHTML);
+         });
+     }
+</script>
+<style>
+    .booklistitem
+	{
+		cursor: pointer;
+		margin:1px;
+	}
+</style>
+</head>
+
+<body>
+<div id="header">
+	<h1 class="ht">Milestone 3</h1> </div>
+              <br>
+	<input type="text" id="searchTerm" />
+	<input type="button" id="btnSearch" value="Search" />
+           <br>
+<ul class="pg">
+             <br>
+            <li id="pg1"><a href="#">1</a></li>
+            <li id="pg2"><a href="#">2</a></li>
+            <li id="pg3"><a href="#">3</a></li>
+            <li id="pg4"><a href="#">4</a></li>
+            <li id="pg5"><a href="#">5</a></li>
+        </ul>
+
+          
+<div id="maincontent">
+          <br>
+          <h1 class="title">Search Results </h1>
+	<div id="booklist"></div>
+    <div>
+           
+        <h1 class="title">My Library</h1>
+        <div id="mybooklist"></div>
+        <div id="#currentPage"></div>
+    </div>
+    
+        <h1 class="title">Book Details</h1>
+    </div>  
+	<div id="bookdetails" style="width: 50%; padding:10px"></div>
+    </div>
+</div>
+</body>
+</html>

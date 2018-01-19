@@ -1,0 +1,14 @@
+body				{font-family: Book Antiqua, Arial, sans-serif;
+						background-color:silver}
+
+.ht		{text-align: center; color: white;
+						
+}
+
+#header 			{background-color: black;
+						width: 100%;
+						margin: auto;
+						height: 80%;
+						margin-top: -20px;
+						border: 1px solid black;
+}
